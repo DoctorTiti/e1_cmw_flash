@@ -1,0 +1,7 @@
+#!/system/bootstrap/bin/busybox sh
+
+if [ ! -d "/bootstrap" ]; then
+	exec /system/bootstrap/bin/strap.sh
+fi
+
+/system/bin/e2fsck_hijacked $*
